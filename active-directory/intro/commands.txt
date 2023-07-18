@@ -1,1 +1,2 @@
+Connect to remote Windows machine:
 xfreerdp /v:<machine_ip> /u:<>username /p:<password>

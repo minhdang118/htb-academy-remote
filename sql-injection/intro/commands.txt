@@ -1,15 +1,53 @@
 Connect to database:
+
     mysql -u <username> -h <hostname> -P <port> -p
 
+--------------------------------------------------
+
 SQL statements:
-    SHOW databases;
+
+    SHOW
+        DATEBASES;
+        TABLES;
+
     USE <database_name>;
-    SHOW tables;
+
     CREATE TABLE <table_name> (
-        <field_name> <DATA_TYPE> <DESCRIPTION 1> <DESCRIPTION 2>,
-        <field_name> <DATA_TYPE> <DESCRIPTION 1> <DESCRIPTION 2>,
+        <field_name> <DATA_TYPE> <DESCRIPTION 1> <DESCRIPTION 2> ... ,
+        <field_name> <DATA_TYPE> <DESCRIPTION 1> <DESCRIPTION 2> ... ,
+        ...
         PRIMARY KEY (<field_name>)
     );
+
     DESCRIBE <table_name>;
-    INSERT INTO table_name(column2, column3, ...) VALUES (column2_value, column3_value, ...);
+
+    INSERT INTO table_name(field_name_1, field_name_2, ...) VALUES (value_1, value_2, ...);
+
+    SELECT
+        * FROM <table_name>
+        <field_name_1>, <field_name_2>, ... FROM <table_name>
+            ORDER BY <field_name_1> ASC|DESC, <field_name_2> ASC|DESC;
+            LIMIT <offset>, <limit>;
+            WHERE
+                <field_name> LIKE <pattern>;
+                <condition>;
+
+    DROP TABLE <table_name>;
+
+    ALTER TABLE <table_name>
+        ADD <field_name> <DATA_TYPE>;
+        RENAME COLUMN <field_name_1> TO <field_name_2>;
+        MODIFY <field_name> <DATA_TYPE>;
+        DROP <field_name>;
+
+    UPDATE <table_name> SET <field_name_1>=<value_1>, <field_name_2>=<value_2>, ... WHERE <condition>;
+
+    Operators:
+        &&, ||, !, +, -, *, /, %
+        =, >, <, >=, <=, !=, LIKE
+        
+
+
+
+
 
